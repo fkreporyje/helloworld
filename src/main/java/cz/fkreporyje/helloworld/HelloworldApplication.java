@@ -1,4 +1,4 @@
-package cz.fkreporyje.helloworld.helloworld;
+package cz.fkreporyje.helloworld;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
