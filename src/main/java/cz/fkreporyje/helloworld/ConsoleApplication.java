@@ -28,9 +28,9 @@ public class ConsoleApplication implements CommandLineRunner {
 
             //Svobodak
             LearningSvobodaImpl learning2=new LearningSvobodaImpl();
-            learning2.getFirstTwoLetters("řeporyje");
+            learning2.getFirstTwoLetters("Řeporyje");
             System.out.println(" ");                                         //konec odstavce :/ (bohužel nevim, jak to udělat správně)
-            learning2.getLastTwoLetters("řeporyje");
+            learning2.getLastTwoLetters("Řeporyje");
 
 
 

@@ -11,7 +11,7 @@ public class LearningSvobodaImpl implements Learning {
         for (int i = 0; i < 2; i++) {
             System.out.print(g[i] + "");
         }
-        return "nic";
+        return null;
     }
 
     @Override
@@ -20,6 +20,6 @@ public class LearningSvobodaImpl implements Learning {
         for (int i = g.length-2; i < g.length; i++) {
             System.out.print(g[i] + "");
         }
-        return "nic";
+        return null;
         }
 }
