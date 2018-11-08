@@ -5,6 +5,7 @@ import cz.fkreporyje.helloworld.services.impl.LearningSvobodaImpl;
 import cz.fkreporyje.helloworld.services.impl.LearningTomasImpl;
 
 import static java.lang.System.exit;
+import static java.lang.System.setOut;
 
 
 public class ConsoleApplication  {
@@ -13,11 +14,12 @@ public class ConsoleApplication  {
         try {
 
             System.out.println("Begin of program");
-            System.out.println("End of program");
+
 
             //Kdybychom to měl implemetované tak uděláme a můžu si zkusit, že to krásně běhá
-            //LearningTomasImpl learning = new LearningTomasImpl();
-
+            LearningTomasImpl learning = new LearningTomasImpl();
+            System.out.println("První dvě " + learning.getFirstTwoLetters("Řepo"));
+            System.out.println("Poslední dvě " + learning.getLastTwoLetters("Řepo"));
 
 
             LearningSvobodaImpl svobodak=new LearningSvobodaImpl();
@@ -26,8 +28,12 @@ public class ConsoleApplication  {
 
             LearningRejzaImpl rejza=new LearningRejzaImpl();
             rejza.getFirstTwoLetters("jejda");
-            System.out.println(" ");
             rejza.getLastTwoLetters("hop");
+
+
+
+
+            System.out.println("End of program");
 
         } catch (Exception ex) {
 

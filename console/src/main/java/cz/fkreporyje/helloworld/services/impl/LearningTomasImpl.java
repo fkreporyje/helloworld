@@ -6,11 +6,11 @@ public class LearningTomasImpl implements Learning {
 
     @Override
     public String getFirstTwoLetters(String input) {
-        return null;
+        return input.substring(0,2);
     }
 
     @Override
     public String getLastTwoLetters(String input) {
-        return null;
+        return input.substring(input.length() - 2);
     }
 }
