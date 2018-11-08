@@ -1,5 +1,6 @@
 package cz.fkreporyje.helloworld;
 
+import cz.fkreporyje.helloworld.services.impl.LearningRejzaImpl;
 import cz.fkreporyje.helloworld.services.impl.LearningSvobodaImpl;
 import cz.fkreporyje.helloworld.services.impl.LearningTomasImpl;
 
@@ -24,7 +25,10 @@ public class ConsoleApplication  {
             System.out.println(" ");                                         //konec odstavce :/ (bohužel nevim, jak to udělat správně)
             learning2.getLastTwoLetters("Řeporyje");
 
-
+            LearningRejzaImpl rejza=new LearningRejzaImpl();
+            rejza.getFirstTwoLetters("jejda");
+            System.out.println(" ");
+            rejza.getLastTwoLetters("hop");
 
         } catch (Exception ex) {
 
