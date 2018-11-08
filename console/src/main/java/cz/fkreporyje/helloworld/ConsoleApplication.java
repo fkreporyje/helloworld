@@ -22,7 +22,6 @@ public class ConsoleApplication  {
 
             LearningSvobodaImpl svobodak=new LearningSvobodaImpl();
             System.out.println(svobodak.getFirstTwoLetters("Řeporyje"));
-            System.out.println(" ");                                         //konec odstavce :/ (bohužel nevim, jak to udělat správně)
             System.out.println(svobodak.getLastTwoLetters("Řeporyje"));
 
             LearningRejzaImpl rejza=new LearningRejzaImpl();

@@ -9,7 +9,7 @@ public class LearningSvobodaImpl implements Learning {
         String x="";
         char[]g = input.toCharArray();
         for (int i = 0; i < 2; i++) {
-            x+=String.valueOf (g[i]++);
+            x+=String.valueOf (g[i]);
         }
         return x;
     }
@@ -19,7 +19,7 @@ public class LearningSvobodaImpl implements Learning {
         String y="";
         char[]g = input.toCharArray();
         for (int i = g.length-2; i < g.length; i++) {
-            y+=String.valueOf (g[i]++);
+            y+=String.valueOf (g[i]);
         }
         return y;
         }
