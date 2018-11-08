@@ -19,11 +19,11 @@ public class ConsoleApplication  {
             //LearningTomasImpl learning = new LearningTomasImpl();
 
 
-            //Svobodak
-            LearningSvobodaImpl learning2=new LearningSvobodaImpl();
-            learning2.getFirstTwoLetters("Řeporyje");
+
+            LearningSvobodaImpl svobodak=new LearningSvobodaImpl();
+            System.out.println(svobodak.getFirstTwoLetters("Řeporyje"));
             System.out.println(" ");                                         //konec odstavce :/ (bohužel nevim, jak to udělat správně)
-            learning2.getLastTwoLetters("Řeporyje");
+            System.out.println(svobodak.getLastTwoLetters("Řeporyje"));
 
             LearningRejzaImpl rejza=new LearningRejzaImpl();
             rejza.getFirstTwoLetters("jejda");
