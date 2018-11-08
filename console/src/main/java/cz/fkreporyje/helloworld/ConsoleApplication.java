@@ -1,22 +1,14 @@
 package cz.fkreporyje.helloworld;
 
 import cz.fkreporyje.helloworld.services.impl.LearningSvobodaImpl;
-import org.springframework.boot.CommandLineRunner;
-import org.springframework.stereotype.Component;
-
 import cz.fkreporyje.helloworld.services.impl.LearningTomasImpl;
 
 import static java.lang.System.exit;
 
-@Component
-public class ConsoleApplication implements CommandLineRunner {
 
+public class ConsoleApplication  {
 
-    /**
-     * Tady si budete zkoušet Váš kod :)
-     */
-    @Override
-    public void run(String... args) throws Exception {
+    public static void main(String[] args) {
         try {
 
             System.out.println("Begin of program");

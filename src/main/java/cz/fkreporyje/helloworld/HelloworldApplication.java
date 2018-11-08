@@ -15,6 +15,4 @@ public class HelloworldApplication {
 		app.setBannerMode(Banner.Mode.OFF);
 		app.run(args);
 	}
-
-
 }
