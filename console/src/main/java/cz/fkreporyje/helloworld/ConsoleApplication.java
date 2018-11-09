@@ -27,8 +27,8 @@ public class ConsoleApplication  {
             System.out.println(svobodak.getLastTwoLetters("Řeporyje"));
 
             LearningRejzaImpl rejza=new LearningRejzaImpl();
-            rejza.getFirstTwoLetters("jejda");
-            rejza.getLastTwoLetters("hop");
+            System.out.println(rejza.getFirstTwoLetters("honza"));
+            System.out.println(rejza.getLastTwoLetters("honza"));
 
 
 
