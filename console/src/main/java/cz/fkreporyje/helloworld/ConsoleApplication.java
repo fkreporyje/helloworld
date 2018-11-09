@@ -1,8 +1,14 @@
 package cz.fkreporyje.helloworld;
 
+import cz.fkreporyje.helloworld.services.ServiceTest;
 import cz.fkreporyje.helloworld.services.impl.LearningRejzaImpl;
 import cz.fkreporyje.helloworld.services.impl.LearningSvobodaImpl;
 import cz.fkreporyje.helloworld.services.impl.LearningTomasImpl;
+import cz.fkreporyje.helloworld.services.impl.ServiceTestImpl;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 import static java.lang.System.exit;
 import static java.lang.System.setOut;
@@ -12,28 +18,10 @@ public class ConsoleApplication  {
 
     public static void main(String[] args) {
         try {
-
-            System.out.println("Begin of program");
-
-
-            //Kdybychom to měl implemetované tak uděláme a můžu si zkusit, že to krásně běhá
-            LearningTomasImpl learning = new LearningTomasImpl();
-            System.out.println("První dvě " + learning.getFirstTwoLetters("Řepo"));
-            System.out.println("Poslední dvě " + learning.getLastTwoLetters("Řepo"));
-
-
-            LearningSvobodaImpl svobodak=new LearningSvobodaImpl();
-            System.out.println(svobodak.getFirstTwoLetters("Řeporyje"));
-            System.out.println(svobodak.getLastTwoLetters("Řeporyje"));
-
-            LearningRejzaImpl rejza=new LearningRejzaImpl();
-            System.out.println(rejza.getFirstTwoLetters("honza"));
-            System.out.println(rejza.getLastTwoLetters("honza"));
-
-
-
-
-            System.out.println("End of program");
+            ServiceTest serviceTest = new ServiceTestImpl();
+            List<Integer> list = Arrays.asList(1,2,3,4,8,10,5,6);
+            int maxValueFromList = serviceTest.returnMaxValueFromList(list);
+            System.out.println(maxValueFromList);
 
         } catch (Exception ex) {
 

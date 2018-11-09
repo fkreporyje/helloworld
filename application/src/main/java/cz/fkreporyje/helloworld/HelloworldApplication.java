@@ -11,8 +11,6 @@ import static java.lang.System.exit;
 public class HelloworldApplication {
 
 	public static void main(String[] args) {
-		SpringApplication app = new SpringApplication(HelloworldApplication.class);
-		app.setBannerMode(Banner.Mode.OFF);
-		app.run(args);
+		SpringApplication.run(HelloworldApplication.class, args);
 	}
 }
