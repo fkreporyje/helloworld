@@ -1,17 +1,12 @@
 package cz.fkreporyje.helloworld;
 
-import cz.fkreporyje.helloworld.services.ServiceTest;
-import cz.fkreporyje.helloworld.services.impl.LearningRejzaImpl;
-import cz.fkreporyje.helloworld.services.impl.LearningSvobodaImpl;
-import cz.fkreporyje.helloworld.services.impl.LearningTomasImpl;
-import cz.fkreporyje.helloworld.services.impl.ServiceTestImpl;
-
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import cz.fkreporyje.helloworld.services.ServiceTest;
+import cz.fkreporyje.helloworld.services.impl.ServiceTestImpl;
+
 import static java.lang.System.exit;
-import static java.lang.System.setOut;
 
 
 public class ConsoleApplication  {

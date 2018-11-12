@@ -11,8 +11,8 @@
 	<name>helloworld</name>
 
 	<modules>
-		<module>console</module>
 		<module>application</module>
+		<module>consoleApplication</module>
 	</modules>
 
 
