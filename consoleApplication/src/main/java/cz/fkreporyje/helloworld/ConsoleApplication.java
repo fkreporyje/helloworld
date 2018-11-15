@@ -3,7 +3,10 @@ package cz.fkreporyje.helloworld;
 import java.util.Arrays;
 import java.util.List;
 
+import cz.fkreporyje.helloworld.model.BookModel;
+import cz.fkreporyje.helloworld.services.BookService;
 import cz.fkreporyje.helloworld.services.ServiceTest;
+import cz.fkreporyje.helloworld.services.impl.BookServiceImpl;
 import cz.fkreporyje.helloworld.services.impl.ServiceTestImpl;
 
 import static java.lang.System.exit;
@@ -13,10 +16,13 @@ public class ConsoleApplication  {
 
     public static void main(String[] args) {
         try {
-            ServiceTest serviceTest = new ServiceTestImpl();
-            List<Integer> list = Arrays.asList(1,2,3,4,8,10,5,6);
-            int maxValueFromList = serviceTest.returnMaxValueFromList(list);
-            System.out.println(maxValueFromList);
+
+            BookService bookService = new BookServiceImpl();
+            BookModel bookModel = new BookModel();
+            bookModel.setBookName("Kniha o Vocim, aneb jak míč netrefil");
+            bookService.addBook(bookModel);
+
+
 
         } catch (Exception ex) {
 
