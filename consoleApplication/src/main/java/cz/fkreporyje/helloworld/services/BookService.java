@@ -5,5 +5,5 @@ import cz.fkreporyje.helloworld.model.BookModel;
 public interface BookService {
 
     void addBook(BookModel book);
-    void vytiskeAll(BookModel book);
+    void printAll(BookModel book);
 }

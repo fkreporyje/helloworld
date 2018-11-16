@@ -25,9 +25,13 @@ public class BookDaoImpl implements BookDao {
         System.out.println("Save book to DB");
     }
 
-    public void vytiskeAll(BookModel bookModel) {
-        for(BookModel z : scifiDatabaseWithBooks)
-            System.out.println(z.toString());
+    @Override
+    public String printAll(BookModel bookModel) {
+        String r="";
+        for(BookModel z : scifiDatabaseWithBooks){
+            r+=String.valueOf(z);
+        }
+            return r;
     }
 
 

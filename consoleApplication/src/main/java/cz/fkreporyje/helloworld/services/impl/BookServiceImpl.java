@@ -16,8 +16,8 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public void vytiskeAll(BookModel book) {
-        bookDao.vytiskeAll(book);
+    public void printAll(BookModel book) {
+        System.out.println(bookDao.printAll(book));
     }
 
 

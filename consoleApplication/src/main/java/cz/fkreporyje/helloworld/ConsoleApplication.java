@@ -25,7 +25,7 @@ public class ConsoleApplication  {
             BookModel bookModel2 = new BookModel();
             bookModel2.setBookName("Druhá kniha o Svobym, jak míč si povodil :)");
             bookService.addBook(bookModel2);
-            bookService.vytiskeAll(bookModel2);
+            bookService.printAll(bookModel2);
 
 
 
