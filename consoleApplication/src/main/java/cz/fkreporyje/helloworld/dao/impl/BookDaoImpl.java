@@ -18,9 +18,20 @@ public class BookDaoImpl implements BookDao {
         scifiDatabaseWithBooks = new ArrayList<>();
     }
 
+
     @Override
     public void addBook(BookModel bookModel) {
         scifiDatabaseWithBooks.add(bookModel);
         System.out.println("Save book to DB");
     }
+
+    public void vytiskeAll(BookModel bookModel) {
+        for(BookModel z : scifiDatabaseWithBooks)
+            System.out.println(z.toString());
+    }
+
+
+
+
+
 }

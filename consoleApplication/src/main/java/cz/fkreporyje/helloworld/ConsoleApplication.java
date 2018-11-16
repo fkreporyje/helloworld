@@ -22,6 +22,14 @@ public class ConsoleApplication  {
             bookModel.setBookName("Kniha o Vocim, aneb jak míč netrefil");
             bookService.addBook(bookModel);
 
+            BookModel bookModel2 = new BookModel();
+            bookModel2.setBookName("Druhá kniha o Svobym, jak míč si povodil :)");
+            bookService.addBook(bookModel2);
+            bookService.vytiskeAll(bookModel2);
+
+
+
+
 
 
         } catch (Exception ex) {

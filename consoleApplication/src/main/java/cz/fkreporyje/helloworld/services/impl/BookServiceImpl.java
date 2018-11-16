@@ -14,4 +14,12 @@ public class BookServiceImpl implements BookService {
     public void addBook(BookModel book) {
         bookDao.addBook(book);
     }
+
+    @Override
+    public void vytiskeAll(BookModel book) {
+        bookDao.vytiskeAll(book);
+    }
+
+
+
 }
