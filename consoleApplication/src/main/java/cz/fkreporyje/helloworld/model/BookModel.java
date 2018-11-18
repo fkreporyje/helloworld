@@ -6,11 +6,11 @@ public class BookModel {
     private long id;
     private Double price;
 
-    public BookModel(String bookName, long id){
-        this.bookName=bookName;
-        this.setId(id);
+    public BookModel(long id, String bookName, Double price) {
+        this.bookName = bookName;
+        this.id = id;
+        this.price = price;
     }
-
 
 
     public String getBookName() {

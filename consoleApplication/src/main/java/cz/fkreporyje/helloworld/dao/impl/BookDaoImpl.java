@@ -16,7 +16,10 @@ public class BookDaoImpl implements BookDao {
 
     private void createScifiDatabase() {
         scifiDatabaseWithBooks = new ArrayList<>();
-
+        scifiDatabaseWithBooks.add(new BookModel(1,"Vinetou", 100.0));
+        scifiDatabaseWithBooks.add(new BookModel(2,"Harry Poter", 200.0));
+        scifiDatabaseWithBooks.add(new BookModel(3,"Pán Prstenů", 300.0));
+        scifiDatabaseWithBooks.add(new BookModel(3,"Práskač", 400.0));
     }
 
 
