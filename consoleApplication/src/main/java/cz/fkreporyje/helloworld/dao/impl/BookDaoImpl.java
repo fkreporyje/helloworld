@@ -34,8 +34,11 @@ public class BookDaoImpl implements BookDao {
             return r;
     }
 
-
-
+    @Override
+    public void clearAll(BookModel bookModel) {
+        scifiDatabaseWithBooks.clear();
+        System.out.println("Všechny knihy odstraněny");
+    }
 
 
 }
