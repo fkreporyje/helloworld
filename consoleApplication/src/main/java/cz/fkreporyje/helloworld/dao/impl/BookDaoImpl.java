@@ -36,12 +36,12 @@ public class BookDaoImpl implements BookDao {
 
     @Override
     public BookModel getBookById(long toFind){
-        BookModel m;                  //Inicializovat objekt podle mě dost dobře nejde, ne?
+        //Inicializovat objekt podle mě dost dobře nejde, ne?
         for (BookModel g : scifiDatabaseWithBooks) {
-            if (g.getId()==(toFind))
-                m+=g;
+            if (g.getId() == toFind)
+               return g;
         }
-        return m;                      //Zde bych potřeboval aby návratový typ byl objekt BookModel
+        return null;                      //Zde bych potřeboval aby návratový typ byl objekt BookModel
     }
 
 
