@@ -20,6 +20,10 @@ public class BookServiceImpl implements BookService {
         System.out.println(bookDao.printAll(book));
     }
 
+    @Override
+    public void clearAll(BookModel book) {
+        bookDao.clearAll(book);
+    }
 
 
 }
