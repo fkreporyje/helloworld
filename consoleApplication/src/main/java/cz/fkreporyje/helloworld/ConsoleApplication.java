@@ -1,13 +1,10 @@
 package cz.fkreporyje.helloworld;
 
-import java.util.Arrays;
-import java.util.List;
-
 import cz.fkreporyje.helloworld.model.BookModel;
 import cz.fkreporyje.helloworld.services.BookService;
-import cz.fkreporyje.helloworld.services.ServiceTest;
 import cz.fkreporyje.helloworld.services.impl.BookServiceImpl;
-import cz.fkreporyje.helloworld.services.impl.ServiceTestImpl;
+
+import java.util.List;
 
 import static java.lang.System.exit;
 
@@ -23,7 +20,7 @@ public class ConsoleApplication  {
 
             BookModel bookModel2 = new BookModel("Druhá kniha o Svobym, jak míč si povodil :)",102);
             bookService.addBook(bookModel2);
-            bookService.printAll(bookModel2);
+            List<BookModel> allBooks = bookService.getAllBooks();
 
             bookService.getBookById(102);
 

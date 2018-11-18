@@ -26,12 +26,8 @@ public class BookDaoImpl implements BookDao {
     }
 
     @Override
-    public String printAll(BookModel bookModel) {
-        String r="";
-        for(BookModel z : scifiDatabaseWithBooks){
-            r+=String.valueOf(z);
-        }
-            return r;
+    public List<BookModel> getAllBooks() {
+        return scifiDatabaseWithBooks;
     }
 
     @Override

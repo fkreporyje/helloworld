@@ -5,6 +5,8 @@ import cz.fkreporyje.helloworld.dao.impl.BookDaoImpl;
 import cz.fkreporyje.helloworld.model.BookModel;
 import cz.fkreporyje.helloworld.services.BookService;
 
+import java.util.List;
+
 public class BookServiceImpl implements BookService {
 
     BookDao bookDao = new BookDaoImpl();
@@ -16,8 +18,8 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public void printAll(BookModel book) {
-        System.out.println(bookDao.printAll(book));
+    public List<BookModel> getAllBooks() {
+        return bookDao.getAllBooks();
     }
 
     @Override
@@ -27,8 +29,8 @@ public class BookServiceImpl implements BookService {
 
 
     @Override
-    public void getBookById(long toFind){
-        System.out.println(bookDao.getBookById(toFind));
+    public BookModel getBookById(long toFind){
+        return bookDao.getBookById(toFind);
     }
 
 
