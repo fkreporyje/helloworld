@@ -26,4 +26,10 @@ public class BookServiceImpl implements BookService {
     }
 
 
+    @Override
+    public void getBookById(long toFind){
+        System.out.println(bookDao.getBookById(toFind));
+    }
+
+
 }

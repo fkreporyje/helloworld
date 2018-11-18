@@ -35,6 +35,18 @@ public class BookDaoImpl implements BookDao {
     }
 
     @Override
+    public BookModel getBookById(long toFind){
+        BookModel m;                  //Inicializovat objekt podle mě dost dobře nejde, ne?
+        for (BookModel g : scifiDatabaseWithBooks) {
+            if (g.getId()==(toFind))
+                m+=g;
+        }
+        return m;                      //Zde bych potřeboval aby návratový typ byl objekt BookModel
+    }
+
+
+
+    @Override
     public void clearAll(BookModel bookModel) {
         scifiDatabaseWithBooks.clear();
         System.out.println("Všechny knihy odstraněny");

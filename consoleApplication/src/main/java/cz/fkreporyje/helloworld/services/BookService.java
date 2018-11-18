@@ -7,4 +7,5 @@ public interface BookService {
     void addBook(BookModel book);
     void printAll(BookModel book);
     void clearAll(BookModel book);
+    void getBookById(long toFind);
 }
