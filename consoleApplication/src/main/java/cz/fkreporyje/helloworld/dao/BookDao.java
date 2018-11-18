@@ -9,5 +9,5 @@ public interface BookDao {
     String printAll(BookModel x);
     String getBookById(long toFind);
 
-
+    void clearAll(BookModel bookModel);
 }

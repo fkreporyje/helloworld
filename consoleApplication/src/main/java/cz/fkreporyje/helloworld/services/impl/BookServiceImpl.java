@@ -8,7 +8,6 @@ import cz.fkreporyje.helloworld.services.BookService;
 public class BookServiceImpl implements BookService {
 
     BookDao bookDao = new BookDaoImpl();
-    long toFind;
 
 
     @Override
@@ -22,8 +21,9 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public void getBookById(long toFind){
-        System.out.println(bookDao.getBookById(toFind));
+    public void clearAll(BookModel book) {
+        bookDao.clearAll(book);
     }
-}
 
+
+}

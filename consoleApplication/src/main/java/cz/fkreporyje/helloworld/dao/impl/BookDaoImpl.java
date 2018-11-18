@@ -27,24 +27,18 @@ public class BookDaoImpl implements BookDao {
 
     @Override
     public String printAll(BookModel bookModel) {
-        String r = "";
-        for (BookModel z : scifiDatabaseWithBooks) {
-            r += z;
+        String r="";
+        for(BookModel z : scifiDatabaseWithBooks){
+            r+=String.valueOf(z);
         }
-        return r;
+            return r;
     }
-
 
     @Override
-    public String getBookById(long toFind){
-        String m = "";
-        for (BookModel g : scifiDatabaseWithBooks) {
-            if (g.getId()==(toFind))
-                m +=g;
-        }
-        return m;
-        }
-
-
-
+    public void clearAll(BookModel bookModel) {
+        scifiDatabaseWithBooks.clear();
+        System.out.println("Všechny knihy odstraněny");
     }
+
+
+}

@@ -6,5 +6,5 @@ public interface BookService {
 
     void addBook(BookModel book);
     void printAll(BookModel book);
-    void getBookById(long toFind);
+    void clearAll(BookModel book);
 }
