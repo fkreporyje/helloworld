@@ -7,6 +7,7 @@ public interface BookDao {
 
     void addBook(BookModel bookModel);
     String printAll(BookModel x);
+    String getBookById(long toFind);
 
 
 }

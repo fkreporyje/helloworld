@@ -18,14 +18,14 @@ public class ConsoleApplication  {
         try {
 
             BookService bookService = new BookServiceImpl();
-            BookModel bookModel = new BookModel();
-            bookModel.setBookName("Kniha o Vocim, aneb jak míč netrefil");
-            bookService.addBook(bookModel);
+            BookModel bookModel = new BookModel("Kniha o Vocim, aneb jak míč netrefil",101);
+            bookService.addBook(bookModel);;
 
-            BookModel bookModel2 = new BookModel();
-            bookModel2.setBookName("Druhá kniha o Svobym, jak míč si povodil :)");
+            BookModel bookModel2 = new BookModel("Druhá kniha o Svobym, jak míč si povodil :)",102);
             bookService.addBook(bookModel2);
             bookService.printAll(bookModel2);
+
+            bookService.getBookById(102);
 
 
 
