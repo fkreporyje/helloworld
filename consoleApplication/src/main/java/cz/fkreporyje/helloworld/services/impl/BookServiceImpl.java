@@ -23,8 +23,8 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public void clearAll(BookModel book) {
-        bookDao.clearAll(book);
+    public void clearAll() {
+        bookDao.clearAll();
     }
 
 

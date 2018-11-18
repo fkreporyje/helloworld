@@ -8,6 +8,6 @@ public interface BookService {
 
     void addBook(BookModel book);
     List<BookModel>  getAllBooks();
-    void clearAll(BookModel book);
+    void clearAll();
     BookModel getBookById(long toFind);
 }

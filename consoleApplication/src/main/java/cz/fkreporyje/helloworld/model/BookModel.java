@@ -4,6 +4,7 @@ public class BookModel {
 
     private String bookName;
     private long id;
+    private Double price;
 
     public BookModel(String bookName, long id){
         this.bookName=bookName;
@@ -28,6 +29,13 @@ public class BookModel {
         this.id = id;
     }
 
+    public Double getPrice() {
+        return price;
+    }
+
+    public void setPrice(Double price) {
+        this.price = price;
+    }
 
     @Override
     public String toString() {

@@ -16,6 +16,7 @@ public class BookDaoImpl implements BookDao {
 
     private void createScifiDatabase() {
         scifiDatabaseWithBooks = new ArrayList<>();
+
     }
 
 
@@ -31,19 +32,16 @@ public class BookDaoImpl implements BookDao {
     }
 
     @Override
-    public BookModel getBookById(long toFind){
-        //Inicializovat objekt podle mě dost dobře nejde, ne?
+    public BookModel getBookById(long toFind) {
         for (BookModel g : scifiDatabaseWithBooks) {
             if (g.getId() == toFind)
-               return g;
+                return g;
         }
-        return null;                      //Zde bych potřeboval aby návratový typ byl objekt BookModel
+        return null;
     }
 
-
-
     @Override
-    public void clearAll(BookModel bookModel) {
+    public  void clearAll() {
         scifiDatabaseWithBooks.clear();
         System.out.println("Všechny knihy odstraněny");
     }
