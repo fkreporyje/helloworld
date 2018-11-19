@@ -16,7 +16,7 @@ public class ConsoleApplication  {
 
             BookService bookService = new BookServiceImpl();
             BookModel bookModel1 = new BookModel(101,"Kniha o Vocim, aneb jak míč netrefil",199);
-            BookModel bookModel3 = new BookModel(103,"Konec fotbalu v čechách",249);
+            BookModel bookModel3 = new BookModel(103,"Konec fotbalu v Čechách",249);
             BookModel bookModel4 = new BookModel(104,"Krok za krokem",229);
             BookModel bookModel2 = new BookModel(102,"Druhá kniha o Svobym, jak míč si povodil :)",299);
 
