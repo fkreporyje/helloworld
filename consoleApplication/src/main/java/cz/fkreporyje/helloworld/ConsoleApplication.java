@@ -15,14 +15,21 @@ public class ConsoleApplication  {
         try {
 
             BookService bookService = new BookServiceImpl();
-            BookModel bookModel = new BookModel("Kniha o Vocim, aneb jak míč netrefil",101);
-            bookService.addBook(bookModel);;
+            BookModel bookModel1 = new BookModel(101,"Kniha o Vocim, aneb jak míč netrefil",199);
+            BookModel bookModel3 = new BookModel(103,"Konec fotbalu v čechách",249);
+            BookModel bookModel4 = new BookModel(104,"Krok za krokem",229);
+            BookModel bookModel2 = new BookModel(102,"Druhá kniha o Svobym, jak míč si povodil :)",299);
 
-            BookModel bookModel2 = new BookModel("Druhá kniha o Svobym, jak míč si povodil :)",102);
+            bookService.addBook(bookModel1);
+            bookService.addBook(bookModel3);
+            bookService.addBook(bookModel4);
             bookService.addBook(bookModel2);
+
             List<BookModel> allBooks = bookService.getAllBooks();
 
-            bookService.getBookById(102);
+            System.out.println(bookService.getBookById(102));
+            System.out.printf("Máme k dispozici %s knihy začínající zadanou iniciálou" ,bookService.getPriceForBooksStartWithLetter("K"));
+
 
 
 

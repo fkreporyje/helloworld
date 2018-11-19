@@ -30,8 +30,7 @@ public class BookDaoImpl implements BookDao {
     }
 
     @Override
-    public List<BookModel> getAllBooks() {
-        return scifiDatabaseWithBooks;
+    public List<BookModel> getAllBooks() { return scifiDatabaseWithBooks;
     }
 
     @Override
@@ -48,6 +47,16 @@ public class BookDaoImpl implements BookDao {
         scifiDatabaseWithBooks.clear();
         System.out.println("Všechny knihy odstraněny");
     }
+
+    public double getPriceForBooksStartWithLetter(String letter){
+        double numberOf=0;
+        for (BookModel m : scifiDatabaseWithBooks) {
+            if(m.getBookName().startsWith(letter))
+                numberOf++;
+        }
+        return numberOf;
+    }
+
 
 
 }

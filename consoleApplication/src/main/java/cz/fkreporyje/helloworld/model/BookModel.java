@@ -6,7 +6,7 @@ public class BookModel {
     private long id;
     private Double price;
 
-    public BookModel(long id, String bookName, Double price) {
+    public BookModel(long id, String bookName, double price) {
         this.bookName = bookName;
         this.id = id;
         this.price = price;

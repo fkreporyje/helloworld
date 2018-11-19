@@ -10,4 +10,5 @@ public interface BookService {
     List<BookModel>  getAllBooks();
     void clearAll();
     BookModel getBookById(long toFind);
+    double getPriceForBooksStartWithLetter(String letter);
 }
