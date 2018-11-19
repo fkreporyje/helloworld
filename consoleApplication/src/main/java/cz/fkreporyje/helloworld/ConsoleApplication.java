@@ -28,7 +28,7 @@ public class ConsoleApplication  {
             List<BookModel> allBooks = bookService.getAllBooks();
 
             System.out.println(bookService.getBookById(102));
-            System.out.printf("Máme k dispozici %s knihy začínající zadanou iniciálou" ,bookService.getPriceForBooksStartWithLetter("K"));
+            System.out.printf("Máme k dispozici %s knihy začínající zadanou iniciálou",bookService.getPriceForBooksStartWithLetter("K"));
 
 
 

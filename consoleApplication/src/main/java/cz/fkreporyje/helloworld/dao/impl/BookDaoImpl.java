@@ -48,6 +48,8 @@ public class BookDaoImpl implements BookDao {
         System.out.println("Všechny knihy odstraněny");
     }
 
+
+
     public double getPriceForBooksStartWithLetter(String letter){
         double numberOf=0;
         for (BookModel m : scifiDatabaseWithBooks) {
@@ -55,6 +57,8 @@ public class BookDaoImpl implements BookDao {
                 numberOf++;
         }
         return numberOf;
+
+
     }
 
 
