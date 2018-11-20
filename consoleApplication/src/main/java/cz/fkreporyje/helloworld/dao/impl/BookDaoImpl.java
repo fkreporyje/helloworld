@@ -50,16 +50,7 @@ public class BookDaoImpl implements BookDao {
 
 
 
-    public double getPriceForBooksStartWithLetter(String letter){
-        double numberOf=0;
-        for (BookModel m : scifiDatabaseWithBooks) {
-            if(m.getBookName().startsWith(letter))
-                numberOf++;
-        }
-        return numberOf;
 
-
-    }
 
 
 

@@ -11,5 +11,4 @@ public interface BookDao {
     List<BookModel> getAllBooks();
     BookModel getBookById(long toFind);
     void clearAll();
-    double getPriceForBooksStartWithLetter(String letter);
 }

@@ -33,8 +33,15 @@ public class BookServiceImpl implements BookService {
         return bookDao.getBookById(toFind);
     }
 
+
+
     public double getPriceForBooksStartWithLetter(String letter){
-        return bookDao.getPriceForBooksStartWithLetter(letter);
+        double price=0;
+        for (BookModel x : getAllBooks()){
+            if(x.getBookName().startsWith(letter))
+                price+=x.getPrice();
+        }
+        return price;
     }
 
 
