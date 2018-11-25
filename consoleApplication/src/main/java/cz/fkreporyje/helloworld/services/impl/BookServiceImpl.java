@@ -5,6 +5,7 @@ import cz.fkreporyje.helloworld.dao.impl.BookDaoImpl;
 import cz.fkreporyje.helloworld.model.BookModel;
 import cz.fkreporyje.helloworld.services.BookService;
 
+import java.awt.print.Book;
 import java.util.List;
 
 public class BookServiceImpl implements BookService {
@@ -23,8 +24,8 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public void clearAll() {
-        bookDao.clearAll();
+    public List<BookModel> clearAll() {
+        return bookDao.clearAll();
     }
 
 
