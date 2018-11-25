@@ -28,7 +28,7 @@ public class ConsoleApplication  {
             List<BookModel> allBooks = bookService.getAllBooks();
 
             System.out.println(bookService.getBookById(102));
-            System.out.printf("Suma cen všech knih začínajících zadaným písmenem se rovná %s Kč",bookService.getPriceForBooksStartWithLetter("M"));
+            System.out.printf("Suma cen všech knih začínajících zadaným písmenem se rovná %s Kč",bookService.getPriceForBooksStartWithLetter("K"));
 
 
 
