@@ -12,6 +12,7 @@
 
 	<modules>
 		<module>consoleApplication</module>
+		<module>springConsoleApplication</module>
 	</modules>
 
 	<build>
