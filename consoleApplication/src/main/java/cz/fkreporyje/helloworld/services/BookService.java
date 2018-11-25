@@ -8,7 +8,7 @@ public interface BookService {
 
     void addBook(BookModel book);
     List<BookModel>  getAllBooks();
-    void clearAll();
+    List<BookModel> clearAll();
     BookModel getBookById(long toFind);
     double getPriceForBooksStartWithLetter(String letter);
 }

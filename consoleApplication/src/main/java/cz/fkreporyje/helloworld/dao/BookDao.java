@@ -10,5 +10,5 @@ public interface BookDao {
     void addBook(BookModel bookModel);
     List<BookModel> getAllBooks();
     BookModel getBookById(long toFind);
-    void clearAll();
+    List<BookModel> clearAll();
 }

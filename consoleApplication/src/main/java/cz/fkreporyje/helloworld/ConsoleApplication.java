@@ -30,7 +30,9 @@ public class ConsoleApplication  {
             System.out.println(bookService.getBookById(102));
             System.out.printf("Suma cen všech knih začínajících zadaným písmenem se rovná %s Kč",bookService.getPriceForBooksStartWithLetter("K"));
 
+            List<BookModel> clearAllBooks = bookService.clearAll();
 
+            System.out.println(allBooks);
 
 
 
