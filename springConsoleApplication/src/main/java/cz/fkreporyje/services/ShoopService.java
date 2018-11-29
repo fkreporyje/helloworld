@@ -2,5 +2,5 @@ package cz.fkreporyje.services;
 
 public interface ShoopService {
 
-    String onlyForTest(String s);
+    String onlyForTest(String z);
 }

@@ -1,6 +1,7 @@
 package cz.fkreporyje;
 
 import cz.fkreporyje.services.CarService;
+import cz.fkreporyje.services.ShoopService;
 import cz.fkreporyje.services.ZooService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -16,6 +17,9 @@ public class SpringConsoleApplication implements CommandLineRunner {
     @Autowired                  //Svoboda
     CarService carService;      //Svoboda
 
+    @Autowired
+    ShoopService shoopService; // Rejža
+
     public static void main(String[] args) {
         System.out.println("STARTING THE APPLICATION");
         SpringApplication.run(SpringConsoleApplication.class, args);
@@ -28,6 +32,14 @@ public class SpringConsoleApplication implements CommandLineRunner {
         String s = zooService.onlyForTest("test");
         System.out.println(s);
 
+        System.out.println(shoopService.onlyForTest( "Rejžův test"));
+        String z =shoopService.onlyForTest("zkouška");
+        System.out.println(z);
+
+
 
     }
-}
+
+
+
+    }

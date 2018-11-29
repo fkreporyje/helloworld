@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 public class ShoopServiceImpl implements ShoopService {
 
     @Override
-    public String onlyForTest(String s) {
-        return s;
+    public String onlyForTest(String z) {
+        return z;
     }
 }
