@@ -24,8 +24,8 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public List<BookModel> clearAll() {
-        return bookDao.clearAll();
+    public void  clearAll() {
+        bookDao.clearAll();
     }
 
 
