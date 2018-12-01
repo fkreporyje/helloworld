@@ -1,4 +1,33 @@
 package cz.fkreporyje.Dao.Impl;
 
-public class CarDaoImpl {
+import cz.fkreporyje.Dao.CarDao;
+import cz.fkreporyje.model.CarModel;
+import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+
+@Service
+public class CarDaoImpl implements CarDao {
+
+    public CarDaoImpl() {
+        createDatabase();
+    }
+
+    ArrayList<CarModel> databaseOfCars = new ArrayList<>();
+
+
+    private void createDatabase() {
+        databaseOfCars.add(new CarModel(100,"Škoda"));
+    }
+
+
+    @Override
+    public void addCar(CarModel carmodel) {
+        databaseOfCars.add(carmodel);
+    }
+
+    @Override
+    public ArrayList<CarModel> getEveryCar() {
+        return databaseOfCars;
+    }
 }

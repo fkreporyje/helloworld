@@ -1,5 +1,6 @@
 package cz.fkreporyje;
 
+import cz.fkreporyje.model.CarModel;
 import cz.fkreporyje.services.CarService;
 import cz.fkreporyje.services.ShoopService;
 import cz.fkreporyje.services.ZooService;
@@ -11,8 +12,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class SpringConsoleApplication implements CommandLineRunner {
 
+
     @Autowired
     ZooService zooService;
+
+
 
     @Autowired                  //Svoboda
     CarService carService;      //Svoboda
@@ -31,6 +35,8 @@ public class SpringConsoleApplication implements CommandLineRunner {
         System.out.println(carService.onlyForTest("Svododákův test"));      //Svoboda
         String s = zooService.onlyForTest("test");
         System.out.println(s);
+
+        System.out.println(carService.getSpeed());    //Svoboda
 
         System.out.println(shoopService.onlyForTest( "Rejžův test"));
         String z =shoopService.onlyForTest("zkouška");
