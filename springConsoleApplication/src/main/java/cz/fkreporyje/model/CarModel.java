@@ -13,5 +13,9 @@ public class CarModel {
     public int getSpeed() {
         return speed;
     }
+
+    public String getModel() {
+        return model;
+    }
 }
 

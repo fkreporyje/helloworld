@@ -8,5 +8,5 @@ public interface CarService {
     String onlyForTest(String s);
     List<CarModel> getEveryCar();
     void addCar(CarModel carmodel);
-    int getSpeed();
+    int getSpeed(String vstup);
 }

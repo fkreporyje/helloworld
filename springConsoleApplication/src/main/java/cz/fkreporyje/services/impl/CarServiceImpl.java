@@ -32,10 +32,12 @@ public class CarServiceImpl implements CarService {
     }
 
     @Override
-    public int getSpeed() {
+    public int getSpeed(String vstup) {
         int speed=0;
-        for(CarModel x : getEveryCar())
-        speed=x.getSpeed();
+        for(CarModel x : getEveryCar()){
+            if(x.getModel().startsWith(vstup))
+                speed=x.getSpeed();
+        }
         return speed;
     }
 

@@ -18,7 +18,9 @@ public class CarDaoImpl implements CarDao {
 
     private void createDatabase() {
         databaseOfCars.add(new CarModel(100,"Škoda"));
+        databaseOfCars.add(new CarModel(200,"Volvo"));
     }
+
 
 
     @Override

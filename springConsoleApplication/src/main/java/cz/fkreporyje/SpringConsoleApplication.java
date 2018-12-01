@@ -36,7 +36,7 @@ public class SpringConsoleApplication implements CommandLineRunner {
         String s = zooService.onlyForTest("test");
         System.out.println(s);
 
-        System.out.println(carService.getSpeed());    //Svoboda
+        System.out.println(carService.getSpeed("Š"));    //Svoboda
 
         System.out.println(shoopService.onlyForTest( "Rejžův test"));
         String z =shoopService.onlyForTest("zkouška");
