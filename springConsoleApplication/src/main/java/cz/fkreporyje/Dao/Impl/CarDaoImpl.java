@@ -22,12 +22,6 @@ public class CarDaoImpl implements CarDao {
     }
 
 
-
-    @Override
-    public void addCar(CarModel carmodel) {
-        databaseOfCars.add(carmodel);
-    }
-
     @Override
     public ArrayList<CarModel> getEveryCar() {
         return databaseOfCars;

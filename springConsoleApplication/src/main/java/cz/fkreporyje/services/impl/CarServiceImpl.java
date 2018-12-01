@@ -21,10 +21,6 @@ public class CarServiceImpl implements CarService {
     }
 
 
-    @Override
-    public void addCar(CarModel carmodel) {
-        carDao.addCar(carmodel);
-    }
 
     @Override
     public String onlyForTest(String s) {
