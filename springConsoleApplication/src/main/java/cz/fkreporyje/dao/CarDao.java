@@ -1,4 +1,4 @@
-package cz.fkreporyje.Dao;
+package cz.fkreporyje.dao;
 
 import cz.fkreporyje.model.CarModel;
 

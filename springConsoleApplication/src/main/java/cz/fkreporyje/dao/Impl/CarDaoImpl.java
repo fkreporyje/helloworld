@@ -1,6 +1,6 @@
-package cz.fkreporyje.Dao.Impl;
+package cz.fkreporyje.dao.Impl;
 
-import cz.fkreporyje.Dao.CarDao;
+import cz.fkreporyje.dao.CarDao;
 import cz.fkreporyje.model.CarModel;
 import org.springframework.stereotype.Service;
 

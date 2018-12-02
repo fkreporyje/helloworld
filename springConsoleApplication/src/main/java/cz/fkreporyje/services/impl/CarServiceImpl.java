@@ -1,6 +1,6 @@
 package cz.fkreporyje.services.impl;
 
-import cz.fkreporyje.Dao.CarDao;
+import cz.fkreporyje.dao.CarDao;
 import cz.fkreporyje.model.CarModel;
 import cz.fkreporyje.services.CarService;
 import org.springframework.beans.factory.annotation.Autowired;
