@@ -1,6 +1,6 @@
 package cz.fkreporyje;
 
-import cz.fkreporyje.model.CarModel;
+import cz.fkreporyje.model.AnimalModel;
 import cz.fkreporyje.services.CarService;
 import cz.fkreporyje.services.ShoopService;
 import cz.fkreporyje.services.ZooService;
@@ -16,8 +16,6 @@ public class SpringConsoleApplication implements CommandLineRunner {
     @Autowired
     ZooService zooService;
 
-
-
     @Autowired                  //Svoboda
     CarService carService;      //Svoboda
 
@@ -32,20 +30,37 @@ public class SpringConsoleApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
+
+        // voci začátek kodu
+
+        AnimalModel elza = new AnimalModel();
+        elza.setName("Elza");
+        elza.setAge(10);
+        zooService.createAnimal(elza);
+
+        AnimalModel ferda = new AnimalModel();
+        ferda.setName("Ferda");
+        ferda.setAge(5);
+        zooService.createAnimal(elza);
+
+        for (AnimalModel animalModel : zooService.getAllAnimalFromDatabase()) {
+            System.out.println("Jméno zvířete : " + animalModel.getName() + " věk zvířete :" + animalModel.getAge());
+        }
+
+
+        // tady to si pustím jenom když chci smazat databázi
+        //zooService.clearDatabase();
+
+        // voci konec kodu
+
         System.out.println(carService.onlyForTest("Svododákův test"));      //Svoboda
-        String s = zooService.onlyForTest("test");
-        System.out.println(s);
+
 
         System.out.println(carService.getSpeed("Š"));    //Svoboda
 
-        System.out.println(shoopService.onlyForTest( "Rejžův test"));
-        String z =shoopService.onlyForTest("zkouška");
+        System.out.println(shoopService.onlyForTest("Rejžův test"));
+        String z = shoopService.onlyForTest("zkouška");
         System.out.println(z);
-
-
-
     }
 
-
-
-    }
+}

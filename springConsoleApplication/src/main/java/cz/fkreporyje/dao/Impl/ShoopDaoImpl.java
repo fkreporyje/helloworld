@@ -17,9 +17,7 @@ public class ShoopDaoImpl implements ShoopDao {
 
     }
 
-        ArrayList<MovieModel> databaseOfMovies = new ArrayList<>();
-
-
+    ArrayList<MovieModel> databaseOfMovies = new ArrayList<>();
 
 
     private void createDatabase() {
