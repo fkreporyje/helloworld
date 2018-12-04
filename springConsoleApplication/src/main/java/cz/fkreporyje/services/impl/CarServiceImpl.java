@@ -1,6 +1,7 @@
 package cz.fkreporyje.services.impl;
 
 import cz.fkreporyje.dao.CarDao;
+import cz.fkreporyje.database.CarDatabaseInterface;
 import cz.fkreporyje.model.CarModel;
 import cz.fkreporyje.services.CarService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +14,7 @@ public class CarServiceImpl implements CarService {
 
     @Autowired
     CarDao carDao;
+
 
 
     @Override

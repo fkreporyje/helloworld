@@ -17,5 +17,13 @@ public class CarModel {
     public String getModel() {
         return model;
     }
+
+    @Override
+    public String toString() {
+        return "CarModel{" +
+                "speed=" + speed +
+                ", model='" + model + '\'' +
+                '}';
+    }
 }
 

@@ -4,5 +4,5 @@ import cz.fkreporyje.model.MovieModel;
 
 public interface ShoopDatabaseInterface {
 
-    void createMovieRecord (MovieModel movieModel);
+    void createMovieRecord ();
 }

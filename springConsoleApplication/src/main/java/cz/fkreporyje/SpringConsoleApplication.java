@@ -1,5 +1,7 @@
 package cz.fkreporyje;
 
+import cz.fkreporyje.database.CarDatabaseInterface;
+import cz.fkreporyje.model.CarModel;
 import cz.fkreporyje.model.AnimalModel;
 import cz.fkreporyje.services.CarService;
 import cz.fkreporyje.services.ShoopService;
@@ -15,6 +17,11 @@ public class SpringConsoleApplication implements CommandLineRunner {
 
     @Autowired
     ZooService zooService;
+
+    @Autowired
+    CarDatabaseInterface carDatabaseInterfac;
+
+
 
     @Autowired                  //Svoboda
     CarService carService;      //Svoboda
@@ -61,6 +68,9 @@ public class SpringConsoleApplication implements CommandLineRunner {
         System.out.println(shoopService.onlyForTest("Rejžův test"));
         String z = shoopService.onlyForTest("zkouška");
         System.out.println(z);
+
+        System.out.println(carDatabaseInterfac.readCarRecord());
+
     }
 
 }
