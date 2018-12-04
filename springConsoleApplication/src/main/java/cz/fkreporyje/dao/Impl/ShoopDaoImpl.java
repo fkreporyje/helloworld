@@ -2,9 +2,12 @@ package cz.fkreporyje.dao.Impl;
 
 import cz.fkreporyje.dao.ShoopDao;
 import cz.fkreporyje.model.MovieModel;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 
+
+@Service
 public class ShoopDaoImpl implements ShoopDao {
 
 
