@@ -5,18 +5,22 @@ public class CarModel {
     int speed;
     String model;
 
-    public CarModel(int speed, String model){
-        this.speed=speed;
-        this.model=model;
-    }
-
-    public int getSpeed() {
+    public int getSpeed(){
         return speed;
     }
 
     public String getModel() {
         return model;
     }
+
+    public void setSpeed(int speed) {
+        this.speed = speed;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
 
     @Override
     public String toString() {

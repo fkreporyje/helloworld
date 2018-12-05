@@ -18,10 +18,6 @@ public class SpringConsoleApplication implements CommandLineRunner {
     @Autowired
     ZooService zooService;
 
-    @Autowired
-    CarDatabaseInterface carDatabaseInterfac;
-
-
 
     @Autowired                  //Svoboda
     CarService carService;      //Svoboda
@@ -43,12 +39,12 @@ public class SpringConsoleApplication implements CommandLineRunner {
         AnimalModel elza = new AnimalModel();
         elza.setName("Elza");
         elza.setAge(10);
-        zooService.createAnimal(elza);
+        //zooService.createAnimal(elza);
 
         AnimalModel ferda = new AnimalModel();
         ferda.setName("Ferda");
         ferda.setAge(5);
-        zooService.createAnimal(elza);
+        //zooService.createAnimal(elza);
 
         for (AnimalModel animalModel : zooService.getAllAnimalFromDatabase()) {
             System.out.println("Jméno zvířete : " + animalModel.getName() + " věk zvířete :" + animalModel.getAge());
@@ -60,16 +56,44 @@ public class SpringConsoleApplication implements CommandLineRunner {
 
         // voci konec kodu
 
-        System.out.println(carService.onlyForTest("Svododákův test"));      //Svoboda
 
 
-        System.out.println(carService.getSpeed("Š"));    //Svoboda
+
+        CarModel audi = new CarModel();
+        audi.setModel("Audina");
+        audi.setSpeed(230);
+        carService.createCar(audi);
+
+        CarModel bavorak = new CarModel();
+        bavorak.setModel("BMW");
+        bavorak.setSpeed(260);
+        carService.createCar(bavorak);
+
+
+
+
+        for (CarModel carModel : carService.getAllCarsFromDatabase()) {
+            System.out.println("Jméno auta:" + carModel.getModel() + " rychlost:" + carModel.getSpeed());
+        }
+
+        //carService.clearDatabase();
+
+
+
+
+
+
+
+
+
 
         System.out.println(shoopService.onlyForTest("Rejžův test"));
         String z = shoopService.onlyForTest("zkouška");
         System.out.println(z);
 
-        System.out.println(carDatabaseInterfac.readCarRecord());
+
+
+
 
     }
 

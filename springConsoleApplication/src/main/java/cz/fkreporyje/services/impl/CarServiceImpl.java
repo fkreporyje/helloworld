@@ -1,7 +1,6 @@
 package cz.fkreporyje.services.impl;
 
 import cz.fkreporyje.dao.CarDao;
-import cz.fkreporyje.database.CarDatabaseInterface;
 import cz.fkreporyje.model.CarModel;
 import cz.fkreporyje.services.CarService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,25 +17,20 @@ public class CarServiceImpl implements CarService {
 
 
     @Override
-    public List<CarModel> getEveryCar() {
-        return carDao.getEveryCar();
-    }
-
-
-
-    @Override
-    public String onlyForTest(String s) {
-        return s;
+    public void createCar(CarModel carModel){
+        carDao.createCarRecord(carModel);
     }
 
     @Override
-    public int getSpeed(String vstup) {
-        int speed=0;
-        for(CarModel x : getEveryCar()){
-            if(x.getModel().startsWith(vstup))
-                speed=x.getSpeed();
-        }
-        return speed;
+    public List <CarModel> getAllCarsFromDatabase() {
+        return carDao.getAllCars();
     }
+
+    @Override
+    public void clearDatabase(){
+        carDao.clearDatabase();
+    }
+
+
 
 }

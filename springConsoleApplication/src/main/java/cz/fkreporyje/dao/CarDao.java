@@ -1,9 +1,11 @@
 package cz.fkreporyje.dao;
 
 import cz.fkreporyje.model.CarModel;
-
-import java.util.ArrayList;
+import java.util.List;
 
 public interface CarDao {
-    ArrayList<CarModel>getEveryCar();
+    List<CarModel>getAllCars();
+    void createCarRecord(CarModel carmodel);
+    void clearDatabase();
+
 }
