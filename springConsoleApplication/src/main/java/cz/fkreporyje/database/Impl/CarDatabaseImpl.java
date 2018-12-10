@@ -17,12 +17,12 @@ import java.util.stream.Stream;
 @Service
 public class CarDatabaseImpl implements CarDatabaseInterface {
 
-    public static final String DATABASE_PRIMITIVE_DATABASE_TXT = "springConsoleApplication/zooPrimitiveDatabase.txt";
+    public static final String DATABASE_PRIMITIVE_DATABASE_TXT = "springConsoleApplication/xxxx.txt";
     private File databaseFile;
 
     public CarDatabaseImpl() {
         try {
-            databaseFile = new File(DATABASE_PRIMITIVE_DATABASE_TXT );
+            databaseFile = new File(DATABASE_PRIMITIVE_DATABASE_TXT);
             databaseFile.createNewFile();
         } catch (Exception e) {
             e.printStackTrace();
@@ -37,6 +37,19 @@ public class CarDatabaseImpl implements CarDatabaseInterface {
             Files.write(databaseFile.toPath(), (carObjectInString + System.lineSeparator()).getBytes(StandardCharsets.UTF_8), StandardOpenOption.APPEND);
         } catch (IOException e) {
             System.out.println("došlo k chybě");
+        }
+    }
+
+    @Override
+    public String getallCarsFromDatabase_02(){
+        try {
+            Path path = Paths.get(databaseFile.toURI());
+            String x=new String(Files.readAllBytes(path));
+            return x;
+        }
+        catch(IOException z) {
+            z.printStackTrace();
+            return null;
         }
     }
 
@@ -71,18 +84,29 @@ public class CarDatabaseImpl implements CarDatabaseInterface {
 
 
     private String getStringFromCarModel(CarModel carModel) {
-        String data = carModel.getModel() + ";" + carModel.getSpeed();
-        return data;
+        return "Name=" + carModel.getModel() + "," + "Speed=" + carModel.getSpeed();
+
     }
 
     private CarModel getCarModelFromString(String carInString) {
         CarModel carModel = new CarModel();
-        String[] split = carInString.split(";");
+        String[] split = carInString.split(",");
         carModel.setModel(split[0]);
         carModel.setSpeed(Integer.valueOf(split[1]));
         return carModel;
 
     }
+
+    private CarModel getCarModelFromString_02(String allCarsinString) {
+        CarModel carModel = new CarModel();
+        String[] split = allCarsinString.split(",");
+        carModel.setModel(split[0]);
+        carModel.setSpeed(Integer.valueOf(split[1]));
+        return carModel;
+
+    }
+
+
 }
 
 

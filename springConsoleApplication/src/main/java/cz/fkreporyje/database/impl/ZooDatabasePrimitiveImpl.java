@@ -17,7 +17,8 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 @Service
-public class ZooDatabasePrimitiveImpl implements ZooDatabaseInterface {
+public class
+ZooDatabasePrimitiveImpl implements ZooDatabaseInterface {
 
     public static final String DATABASE_ZOO_PRIMITIVE_DATABASE_TXT = "springConsoleApplication/zooPrimitiveDatabase.txt";
     private File databaseFile;

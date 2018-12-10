@@ -6,7 +6,13 @@ public class CarModel {
     String model;
 
     public int getSpeed(){
+
         return speed;
+    }
+
+    public String getSpeedInString(){
+        String x="rychlost";
+        return x + String.valueOf(speed);
     }
 
     public String getModel() {

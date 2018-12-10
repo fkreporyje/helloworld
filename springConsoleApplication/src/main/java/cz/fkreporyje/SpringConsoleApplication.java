@@ -39,12 +39,12 @@ public class SpringConsoleApplication implements CommandLineRunner {
         AnimalModel elza = new AnimalModel();
         elza.setName("Elza");
         elza.setAge(10);
-        //zooService.createAnimal(elza);
+        zooService.createAnimal(elza);
 
         AnimalModel ferda = new AnimalModel();
         ferda.setName("Ferda");
         ferda.setAge(5);
-        //zooService.createAnimal(elza);
+        zooService.createAnimal(elza);
 
         for (AnimalModel animalModel : zooService.getAllAnimalFromDatabase()) {
             System.out.println("Jméno zvířete : " + animalModel.getName() + " věk zvířete :" + animalModel.getAge());
