@@ -4,6 +4,7 @@ import cz.fkreporyje.database.CarDatabaseInterface;
 import cz.fkreporyje.model.CarModel;
 import org.springframework.stereotype.Service;
 import java.io.*;
+import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -11,6 +12,7 @@ import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -34,42 +36,16 @@ public class CarDatabaseImpl implements CarDatabaseInterface {
     public void insertCarToDatabase(CarModel carModel) {
         try {
             String carObjectInString = getStringFromCarModel(carModel);
-            Files.write(databaseFile.toPath(), (carObjectInString + System.lineSeparator()).getBytes(StandardCharsets.UTF_8), StandardOpenOption.APPEND);
+            Files.write(databaseFile.toPath(), (carObjectInString).getBytes(StandardCharsets.UTF_8), StandardOpenOption.APPEND);
+            //Files.write(databaseFile.toPath(), (carObjectInString + System.lineSeparator()).getBytes(StandardCharsets.UTF_8), StandardOpenOption.APPEND);
+
+
         } catch (IOException e) {
             System.out.println("došlo k chybě");
         }
     }
 
-    @Override
-    public String getallCarsFromDatabase_02(){
-        try {
-            Path path = Paths.get(databaseFile.toURI());
-            String x=new String(Files.readAllBytes(path));
-            return x;
-        }
-        catch(IOException z) {
-            z.printStackTrace();
-            return null;
-        }
-    }
 
-
-    @Override
-    public List<CarModel> getAllCarsFromDatabase() {
-        try {
-            Path path = Paths.get(databaseFile.toURI());
-            Stream<String> lines = Files.lines(path);
-            List<CarModel> list = new ArrayList<>();
-            for (String data : lines.collect(Collectors.toList())) {
-                list.add(getCarModelFromString(data));
-            }
-            return list;
-
-        } catch (IOException e) {
-            e.printStackTrace();
-            return null;
-        }
-    }
 
     @Override
     public void clearDatabasee() {
@@ -84,7 +60,7 @@ public class CarDatabaseImpl implements CarDatabaseInterface {
 
 
     private String getStringFromCarModel(CarModel carModel) {
-        return "Name=" + carModel.getModel() + "," + "Speed=" + carModel.getSpeed();
+        return "model:"+ carModel.getModel()+"," +carModel.getSpeed()+"; ";
 
     }
 
@@ -97,13 +73,40 @@ public class CarDatabaseImpl implements CarDatabaseInterface {
 
     }
 
-    private CarModel getCarModelFromString_02(String allCarsinString) {
-        CarModel carModel = new CarModel();
-        String[] split = allCarsinString.split(",");
-        carModel.setModel(split[0]);
-        carModel.setSpeed(Integer.valueOf(split[1]));
-        return carModel;
 
+    @Override
+    public List<CarModel> getallCarsFromDatabase_02(){
+
+        try {
+            String content = new String(Files.readAllBytes(Paths.get(databaseFile.toURI())));
+            String[] stringArray = content.split("; ");
+            List<CarModel> list = new ArrayList<>();
+            for (String jmena : stringArray) {
+                list.add(getCarModelFromString(jmena));
+            }
+            return list;
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+                @Override
+    public List<CarModel> getAllCarsFromDatabase() {
+        try {
+            Path path = Paths.get(databaseFile.toURI());
+            Stream<String> lines = Files.lines(path);
+            List<CarModel> list = new ArrayList<>();
+            for (String data : lines.collect(Collectors.toList())) {
+                list.add(getCarModelFromString(data));
+            }
+            return list;
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
 

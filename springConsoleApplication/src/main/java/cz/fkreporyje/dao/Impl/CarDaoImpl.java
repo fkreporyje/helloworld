@@ -17,7 +17,7 @@ public class CarDaoImpl implements CarDao {
 
     @Override
     public List<CarModel> getAllCars(){
-        return carDatabaseInterface.getAllCarsFromDatabase();
+        return carDatabaseInterface.getallCarsFromDatabase_02();
     }
 
     @Override

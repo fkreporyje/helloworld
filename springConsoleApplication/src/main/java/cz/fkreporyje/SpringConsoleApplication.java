@@ -1,6 +1,7 @@
 package cz.fkreporyje;
 
 import cz.fkreporyje.database.CarDatabaseInterface;
+import cz.fkreporyje.database.Impl.CarDatabaseImpl;
 import cz.fkreporyje.model.CarModel;
 import cz.fkreporyje.model.AnimalModel;
 import cz.fkreporyje.services.CarService;
@@ -21,6 +22,10 @@ public class SpringConsoleApplication implements CommandLineRunner {
 
     @Autowired                  //Svoboda
     CarService carService;      //Svoboda
+
+    @Autowired                  //Svoboda
+      CarDatabaseImpl cardatabase;      //Svoboda
+
 
     @Autowired
     ShoopService shoopService; // Rejža
@@ -69,12 +74,13 @@ public class SpringConsoleApplication implements CommandLineRunner {
         bavorak.setSpeed(260);
         carService.createCar(bavorak);
 
+        System.out.println(cardatabase.getallCarsFromDatabase_02());
 
-
-
-        for (CarModel carModel : carService.getAllCarsFromDatabase()) {
-            System.out.println("Jméno auta:" + carModel.getModel() + " rychlost:" + carModel.getSpeed());
+        for (CarModel carmodel : carService.getAllCarsFromDatabase()) {
+            System.out.println(carmodel.getModel() + "," + carmodel.getSpeed());
         }
+
+
 
         //carService.clearDatabase();
 

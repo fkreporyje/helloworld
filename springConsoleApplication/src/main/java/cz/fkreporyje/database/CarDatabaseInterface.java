@@ -8,6 +8,6 @@ public interface CarDatabaseInterface {
     void insertCarToDatabase(CarModel carModel);
     List<CarModel> getAllCarsFromDatabase();
     void clearDatabasee();
-    String getallCarsFromDatabase_02();
+    List<CarModel> getallCarsFromDatabase_02();
 
 }
