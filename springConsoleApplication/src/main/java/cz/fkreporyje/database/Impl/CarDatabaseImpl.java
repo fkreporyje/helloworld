@@ -60,17 +60,27 @@ public class CarDatabaseImpl implements CarDatabaseInterface {
 
 
     private String getStringFromCarModel(CarModel carModel) {
-        return "model:"+ carModel.getModel()+"," +carModel.getSpeed()+"; ";
+        return "Model:"+ carModel.getModel()+"," + "Speed:" + carModel.getSpeed()+"; ";
 
     }
 
     private CarModel getCarModelFromString(String carInString) {
         CarModel carModel = new CarModel();
-        String[] split = carInString.split(",");
-        carModel.setModel(split[0]);
-        carModel.setSpeed(Integer.valueOf(split[1]));
+        int firstIndex=carInString.indexOf(':');   //řetězec až po rozdělovač vyjádřený čárkou
+        int secondIndex=carInString.indexOf(',');//řetězec až po rozdělovač vyjádřený čárkou
+        int thirdIndex=carInString.indexOf("d:");
+
+        String firstString=carInString.substring(firstIndex+1,secondIndex);
+        String secondString=carInString.substring(thirdIndex+2);
+
+        carModel.setModel(firstString);
+        carModel.setSpeed(Integer.parseInt(secondString));
+
         return carModel;
 
+        //String[] partOfString = carInString.split(",");
+        //carModel.setModel(partOfString[0]);
+        //carModel.setSpeed(Integer.valueOf(partOfString[1]));
     }
 
 
@@ -83,23 +93,6 @@ public class CarDatabaseImpl implements CarDatabaseInterface {
             List<CarModel> list = new ArrayList<>();
             for (String jmena : stringArray) {
                 list.add(getCarModelFromString(jmena));
-            }
-            return list;
-
-        } catch (IOException e) {
-            e.printStackTrace();
-            return null;
-        }
-    }
-
-                @Override
-    public List<CarModel> getAllCarsFromDatabase() {
-        try {
-            Path path = Paths.get(databaseFile.toURI());
-            Stream<String> lines = Files.lines(path);
-            List<CarModel> list = new ArrayList<>();
-            for (String data : lines.collect(Collectors.toList())) {
-                list.add(getCarModelFromString(data));
             }
             return list;
 
