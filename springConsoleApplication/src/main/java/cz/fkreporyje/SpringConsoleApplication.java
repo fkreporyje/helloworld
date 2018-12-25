@@ -1,9 +1,8 @@
 package cz.fkreporyje;
 
-import cz.fkreporyje.database.CarDatabaseInterface;
 import cz.fkreporyje.database.Impl.CarDatabaseImpl;
-import cz.fkreporyje.model.CarModel;
 import cz.fkreporyje.model.AnimalModel;
+import cz.fkreporyje.model.CarModel;
 import cz.fkreporyje.services.CarService;
 import cz.fkreporyje.services.ShoopService;
 import cz.fkreporyje.services.ZooService;
