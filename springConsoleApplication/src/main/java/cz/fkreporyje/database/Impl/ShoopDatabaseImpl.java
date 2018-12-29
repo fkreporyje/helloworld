@@ -5,6 +5,7 @@ import cz.fkreporyje.model.MovieModel;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.List;
 
@@ -18,11 +19,13 @@ public class ShoopDatabaseImpl implements ShoopDatabaseInterface {
     @Override
     public void readShoopDatabase() {
 
-        File file = new File ("/Users/janrejzek/IdeaProjects/reporyje-web/springConsoleApplication/shoopDatabase.txt")
+        File file = new File ("springConsoleApplication/shoopDatabase.txt");
 
-        BufferedReader br = new BufferedReader(new FileReader(file));
-
-
+        try {
+            BufferedReader br = new BufferedReader(new FileReader(file));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
 
 
     }
