@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface ShoopDatabaseInterface {
 
-    void readShoopDatabase ();
+    void readShoopDatabase () throws Exception;
     void insertMovieToDatabase (MovieModel movieModel);
     void clearDatabase();
     List<MovieModel> writeAllMoviesToDatabase();

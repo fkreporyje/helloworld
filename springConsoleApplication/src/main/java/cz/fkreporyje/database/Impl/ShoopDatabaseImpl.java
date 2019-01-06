@@ -2,12 +2,14 @@ package cz.fkreporyje.database.Impl;
 
 import cz.fkreporyje.database.ShoopDatabaseInterface;
 import cz.fkreporyje.model.MovieModel;
+import org.springframework.stereotype.Service;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.List;
+
+@Service
 
 public class ShoopDatabaseImpl implements ShoopDatabaseInterface {
 
@@ -16,16 +18,17 @@ public class ShoopDatabaseImpl implements ShoopDatabaseInterface {
 
 
     //načtení textového souboru do programu
-    @Override
-    public void readShoopDatabase() {
+
+    public void readShoopDatabase() throws Exception {
 
         File file = new File ("springConsoleApplication/shoopDatabase.txt");
 
-        try {
-            BufferedReader br = new BufferedReader(new FileReader(file));
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
+        BufferedReader br = new BufferedReader(new FileReader(file));
+
+        String st;
+
+        while ((st = br.readLine ()) != null)
+            System.out.println(st);
 
 
     }

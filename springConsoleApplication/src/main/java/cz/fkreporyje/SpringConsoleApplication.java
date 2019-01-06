@@ -1,6 +1,7 @@
 package cz.fkreporyje;
 
 import cz.fkreporyje.database.Impl.CarDatabaseImpl;
+import cz.fkreporyje.database.Impl.ShoopDatabaseImpl;
 import cz.fkreporyje.model.AnimalModel;
 import cz.fkreporyje.model.CarModel;
 import cz.fkreporyje.services.CarService;
@@ -13,6 +14,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class SpringConsoleApplication implements CommandLineRunner {
+
 
 
     @Autowired
@@ -28,6 +30,11 @@ public class SpringConsoleApplication implements CommandLineRunner {
 
     @Autowired
     ShoopService shoopService; // Rejža
+
+    @Autowired
+    ShoopDatabaseImpl shoopDatabase; //Rejža
+
+
 
     public static void main(String[] args) {
         System.out.println("STARTING THE APPLICATION");
@@ -97,7 +104,7 @@ public class SpringConsoleApplication implements CommandLineRunner {
         System.out.println(z);
 
 
-
+        System.out.println();
 
 
     }
